@@ -1,0 +1,60 @@
+[
+  {
+    "id": 1,
+    "name": "advisor",
+    "clone": [
+      "724d55d6-2a39-0200-8336-9e6cf727bef2"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "baby",
+    "clone": [
+      1
+    ]
+  },
+  {
+    "id": 3,
+    "name": "c3po",
+    "clone": []
+  },
+  {
+    "id": 4,
+    "name": "cosmosHelper",
+    "clone": []
+  },
+  {
+    "id": 5,
+    "name": "dobby",
+    "clone": []
+  },
+  {
+    "id": 6,
+    "name": "eternalai",
+    "clone": []
+  },
+  {
+    "id": 7,
+    "name": "lpmanager",
+    "clone": []
+  },
+  {
+    "id": 8,
+    "name": "portfolio",
+    "clone": []
+  },
+  {
+    "id": 9,
+    "name": "tate",
+    "clone": []
+  },
+  {
+    "id": 10,
+    "name": "trader",
+    "clone": []
+  },
+  {
+    "id": "724d55d6-2a39-0200-8336-9e6cf727bef2",
+    "name": "hello24"
+  }
+]
