@@ -275,7 +275,7 @@ export class DirectClient {
                     createdAt: Date.now(),
                 };
 
-                await runtime.messageManager.addEmbeddingToMemory(memory);
+                // await runtime.messageManager.addEmbeddingToMemory(memory);
                 await runtime.messageManager.createMemory(memory);
 
                 let state = await runtime.composeState(userMessage, {
