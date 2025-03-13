@@ -190,3 +190,96 @@ We now have a [paper](https://arxiv.org/pdf/2501.06781) you can cite for the Eli
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=elizaos/eliza&type=Date)](https://star-history.com/#elizaos/eliza&Date)
+
+
+## How to Run Allora in ElizaOS
+
+To enable the Allora feature in ElizaOS, you first need to obtain an API key.
+
+Step 1: Get the API Key
+
+Visit https://developer.upshot.xyz/.
+Log in and retrieve your API key.
+
+The API_KEY_ALLORA will be formatted as follows:
+Allora API Key format: UP-f8db7d6558ab432ca0d92716
+
+
+Step 2: Configure the Environment
+
+Create a .env file by copying from .env.example.
+Locate the ALLORA_API_KEY entry in the .env file.
+ALLORA_CHAIN_SLUG= mainnet
+Paste the Allora API key you retrieved earlier.
+
+Step 3: Install Dependencies & Start the Server
+
+Run the following command to install dependencies:
+```bash
+pnpm i
+```
+Start the server by running:
+```bash
+sh start_server.sh
+```
+
+The start_server.sh script will launch three agents:
+- MonAnime
+- MonTrader
+- MonDoctor
+
+This guide focuses on running the Allora package with MonTrader.
+
+## Running Allora Predictions
+
+Step 1: Get the List of Running Agents
+Call the /agents API to retrieve the list of active agents.
+```bash
+Example Response:
+{
+	"agents": [
+		{
+			"id": "95654c56-888a-0d17-bc32-57df8d1dedc3",
+			"name": "MonAnime",
+			"clients": []
+		},
+		{
+			"id": "e1fc0723-cc1c-0b66-9b71-15a5303c33a3",
+			"name": "MonDoctor",
+			"clients": []
+		},
+		{
+			"id": "261a5a1d-75b0-0a2c-9fd9-da7e1ad06932",
+			"name": "MonTrader",
+			"clients": []
+		}
+	]
+}
+```
+
+Step 2: Send a Message to MonTrader
+Use the /message API with the agent ID of MonTrader:
+```bash
+/261a5a1d-75b0-0a2c-9fd9-da7e1ad06932/message
+```
+
+Step 3: Use Allora with Prediction Prompts
+
+To ensure the agent selects the Allora feature, try one of the following prompts:
+
+"What is the predicted ETH price in 5 minutes?"
+"What is the predicted price of BTC in 24 hours?"
+```bash
+Expected Response:
+[
+	{
+		"user": "MonTrader",
+		"text": "Hold on tight, I'm pulling up the ETH 5-minute prediction now... (GET_INFERENCE)",
+		"action": "GET_INFERENCE"
+	},
+	{
+		"text": "Inference provided by Allora Network on topic ETH 5min Prediction (Topic ID: 13): 1874.225114047886384003"
+	}
+]
+```
+Now, you're all set to use Allora in ElizaOS!
