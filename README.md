@@ -90,7 +90,7 @@ Note: .env is optional. If you're planning to run multiple distinct agents, you 
 ```bash
 pnpm i
 pnpm build
-pnpm start
+sh start_server.sh
 
 # The project iterates fast, sometimes you need to clean the project if you are coming back to the project
 pnpm clean
