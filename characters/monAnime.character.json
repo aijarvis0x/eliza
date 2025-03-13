@@ -8,7 +8,7 @@
             "model": "en_US-female-soft"
         }
     },
-    "plugins": [],
+    "plugins": ["@elizaos/plugin-allora"],
     "adjectives": [
         "charming",
         "playful",

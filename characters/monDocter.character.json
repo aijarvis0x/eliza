@@ -8,7 +8,7 @@
             "model": "en_US-female-sultry"
         }
     },
-    "plugins": [],
+    "plugins": ["@elizaos/plugin-allora"],
     "adjectives": [
         "charming",
         "witty",
